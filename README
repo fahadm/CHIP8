@@ -1,0 +1,19 @@
+README v 0.1
+============
+You would need to get SFML2 from here
+https://github.com/LaurentGomila/SFML
+and then compile it.
+
+After that you would need to correct all the dependencies in the project.
+And finally you would be able to run this.
+
+Author
+======
+Fahad Mansoor (protoman.vegeta@gmail.com)
+
+ISSUES
+======
+For some reason the hex font is not updated correct.
+Need to create a make file to ease the process or better yet make a cmake file.
+
+
