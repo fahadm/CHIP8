@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -469,12 +468,16 @@ public:
             Reg.I += Reg.V[X];
             break;
           case 0x29:
+          //Not working correctly
             Reg.I = Reg.V[X]*5;
             break;
           case 0x33:
-            Mem.Memory[Reg.I]= Reg.V[X]/100;
-            Mem.Memory[Reg.I+1]= Reg.V[X]/10;
-            Mem.Memory[Reg.I+2]= Reg.V[X];
+           tem = Reg.V[X];
+            Mem.Memory[Reg.I+2]=tem%10;
+            tem/=10;
+            Mem.Memory[Reg.I+1]= tem%10;
+            tem/=10;
+            Mem.Memory[Reg.I]= tem;
           case 0x55:
             for (int i=0 ; i < X ; i++)
               {
